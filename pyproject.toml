@@ -18,10 +18,14 @@ dependencies = [
   "tqdm>=4.66",
   "ollama>=0.2.0",
   "requests>=2.31",
-  "sentence-transformers>=2.3",
-  "faiss-cpu>=1.7.4",
-  "pypdf>=3.17",
-  "pypdfium2>=4.26"
+  "streamlit>=1.32",
+  "sentence-transformers>=5.2",
+  "faiss-cpu>=1.13",
+  "torch>=2.10.0",
+  "transformers>=5.1.0",
+  "pypdf>=6.6",
+  "pypdfium2>=5.3",
+  "dvc>=3.66"
 ]
 
 [tool.pytest.ini_options]

@@ -20,13 +20,21 @@ tqdm>=4.66
 ollama>=0.2.0
 requests>=2.31
 
+# UI
+streamlit>=1.32
+
 # RAG Components
-sentence-transformers>=2.3
-faiss-cpu>=1.7.4  # or faiss-gpu for CUDA
+sentence-transformers>=5.2
+faiss-cpu>=1.13
+torch>=2.10.0
+transformers>=5.1.0
 
 # PDF Processing
-pypdf>=3.17
-pypdfium2>=4.26
+pypdf>=6.6
+pypdfium2>=5.3
+
+# Version Control
+dvc>=3.66
 
 # Optional: Advanced features
 # rank-bm25>=0.2.2  # For hybrid retrieval
