@@ -1,0 +1,55 @@
+project:
+  name: mro_agenticops
+  environment: local
+  version: 0.1.0
+
+paths:
+  raw_data: data/raw
+  interim_data: data/interim
+  processed_data: data/processed
+
+# LLM Configuration
+ollama:
+  base_url: http://localhost:11434
+  model: llama3
+  temperature: 0.1
+  max_tokens: 2048
+  
+# Retrieval Configuration
+retriever:
+  top_k: 5
+  similarity_threshold: 0.7
+  rerank: false
+  hybrid_search: false
+  bm25_weight: 0.3
+
+# Embeddings
+embeddings:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  device: cpu  # 'cpu' or 'cuda'
+  batch_size: 32
+
+# Chunking Strategy
+chunking:
+  chunk_size: 512
+  chunk_overlap: 50
+  splitter: semantic  # 'semantic', 'recursive', 'fixed'
+
+# Evaluation
+evaluation:
+  metrics:
+    - recall@5
+    - mrr@10
+    - ndcg@10
+  ground_truth_path: data/eval/ground_truth.json
+
+# MLflow Tracking
+mlflow:
+  tracking_uri: ./monitoring/mlruns
+  experiment_name: mro_rag_v1
+
+# Logging
+logging:
+  level: INFO
+  format: json
+  file: monitoring/logs/app.log

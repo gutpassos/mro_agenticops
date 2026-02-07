@@ -1,0 +1,15 @@
+Com base no contexto abaixo extraído dos documentos MRO, responda à pergunta de forma precisa e fundamentada.
+
+=== CONTEXTO ===
+{context}
+
+=== PERGUNTA ===
+{question}
+
+=== INSTRUÇÕES ===
+- Use APENAS informações presentes no contexto fornecido
+- Se o contexto não contiver informação suficiente, indique claramente
+- Cite os trechos relevantes quando apropriado
+- Seja conciso mas completo
+
+=== RESPOSTA ===
